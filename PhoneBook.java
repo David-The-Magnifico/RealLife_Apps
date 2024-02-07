@@ -44,17 +44,6 @@ public class PhoneBook {
         }
     }
 
-    public void editContactDetails(String contact, String newDetails) {
-        int index = contacts.indexOf(contact);
-        if (index != -1) {
-            contacts.set(index, newDetails);
-            System.out.println("Contact details edited successfully");
-        } else {
-            System.out.println("Contact not found");
-        }
-    }
-
-
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
         Scanner scanner = new Scanner(System.in);
@@ -70,7 +59,6 @@ public class PhoneBook {
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine(); 
-
             switch (choice) {
                 case 1:
                     System.out.println("Enter contact details:");
@@ -109,36 +97,6 @@ public class PhoneBook {
                     String newContact = scanner.nextLine();
                     phoneBook.editContact(oldContact, newContact);
                     break;
-                    if (index != -1) {
-                        System.out.println("Enter new contact details:");
-                        System.out.print("First Name: ");
-                        String newFirstName = scanner.nextLine();
-                        System.out.print("Last Name: ");
-                        String newLastName = scanner.nextLine();
-                        System.out.print("Phone Number: ");
-                        String newPhoneNumber = scanner.nextLine();
-                        System.out.print("Address: ");
-                        String newAddress = scanner.nextLine();
-                        System.out.print("Email: ");
-                        String newEmail = scanner.nextLine();
-                        System.out.print("Workplace: ");
-                        String newWorkplace = scanner.nextLine();
-                        System.out.print("Address of Workplace: ");
-                        String newWorkplaceAddress = scanner.nextLine();
-
-                        String newContactDetails = 
-                            "First Name: " + newFirstName + 
-                            "\nLast Name: " + newLastName + 
-                            "\nPhone Number: " + newPhoneNumber + 
-                            "\nAddress: " + newAddress + 
-                            "\nEmail: " + newEmail + 
-                            "\nWorkplace: " + newWorkplace + 
-                            "\nAddress of Workplace: " + newWorkplaceAddress;
-                        phoneBook.editContact(contactToEdit, newContactDetails);
-                    } else {
-                        System.out.println("Contact not found");
-                    }
-                    break;
                 case 4:
                     System.out.print("Enter the name of the contact to delete: ");
                     String contactToDelete = scanner.nextLine();
@@ -146,6 +104,7 @@ public class PhoneBook {
                     break;
                 case 5:
                     System.out.println("Exiting...");
+                    System.out.println();
                     System.exit(0);
                     break;
                 default:
