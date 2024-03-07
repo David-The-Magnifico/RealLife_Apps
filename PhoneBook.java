@@ -55,10 +55,10 @@ public class PhoneBook {
             System.out.println("3. Edit Contact");
             System.out.println("4. Delete Contact");
             System.out.println("5. Exit");
+            System.out.println();
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume the newline character
-
+            scanner.nextLine(); 
             switch (choice) {
                 case 1:
                     System.out.println("Enter contact details:");
@@ -91,38 +91,11 @@ public class PhoneBook {
                     phoneBook.viewContacts();
                     break;
                 case 3:
-                    System.out.print("Enter the name of the contact to edit: ");
-                    String contactToEdit = scanner.nextLine();
-                    int index = phoneBook.contacts.indexOf(contactToEdit);
-                    if (index != -1) {
-                        System.out.println("Enter new contact details:");
-                        System.out.print("First Name: ");
-                        String newFirstName = scanner.nextLine();
-                        System.out.print("Last Name: ");
-                        String newLastName = scanner.nextLine();
-                        System.out.print("Phone Number: ");
-                        String newPhoneNumber = scanner.nextLine();
-                        System.out.print("Address: ");
-                        String newAddress = scanner.nextLine();
-                        System.out.print("Email: ");
-                        String newEmail = scanner.nextLine();
-                        System.out.print("Workplace: ");
-                        String newWorkplace = scanner.nextLine();
-                        System.out.print("Address of Workplace: ");
-                        String newWorkplaceAddress = scanner.nextLine();
-
-                        String newContactDetails = 
-                            "First Name: " + newFirstName + 
-                            "\nLast Name: " + newLastName + 
-                            "\nPhone Number: " + newPhoneNumber + 
-                            "\nAddress: " + newAddress + 
-                            "\nEmail: " + newEmail + 
-                            "\nWorkplace: " + newWorkplace + 
-                            "\nAddress of Workplace: " + newWorkplaceAddress;
-                        phoneBook.editContact(contactToEdit, newContactDetails);
-                    } else {
-                        System.out.println("Contact not found");
-                    }
+                    System.out.print("Enter the contact to edit: ");
+                    String oldContact = scanner.nextLine();
+                    System.out.print("Enter the new contact details: ");
+                    String newContact = scanner.nextLine();
+                    phoneBook.editContact(oldContact, newContact);
                     break;
                 case 4:
                     System.out.print("Enter the name of the contact to delete: ");
@@ -131,6 +104,7 @@ public class PhoneBook {
                     break;
                 case 5:
                     System.out.println("Exiting...");
+                    System.out.println();
                     System.exit(0);
                     break;
                 default:
