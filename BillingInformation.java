@@ -12,4 +12,8 @@ public class BillingInformation {
         this.receiverPhone = receiverPhone;
     }
 
-   
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    
