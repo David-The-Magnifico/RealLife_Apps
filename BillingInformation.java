@@ -16,4 +16,8 @@ public class BillingInformation {
         return receiverName;
     }
 
-    
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+   
