@@ -1,6 +1,5 @@
 import java.util.List;
 
-// User class
 public class User {
     private int age;
     private String email;
@@ -9,7 +8,6 @@ public class User {
     private String password;
     private String phone;
 
-    // Getters and Setters
     public int getAge() {
         return age;
     }
