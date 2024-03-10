@@ -32,4 +32,8 @@ public class BillingInformation {
         return creditCardInformation;
     }
 
-    
+    public void setCreditCardInformation(CreditCardInformation creditCardInformation) {
+        this.creditCardInformation = creditCardInformation;
+    }
+
+}
