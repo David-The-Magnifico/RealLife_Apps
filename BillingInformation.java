@@ -8,4 +8,8 @@ public class BillingInformation {
         return receiverPhone;
     }
 
-    
+    public void setReceiverPhone(String receiverPhone) {
+        this.receiverPhone = receiverPhone;
+    }
+
+   
