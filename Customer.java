@@ -5,3 +5,6 @@ public class Customer extends User {
     public void addBillingInformation(BillingInformation billingInformation) {
         billingInformationList.add(billingInformation);
     }
+    public void addToShoppingCart(Item item) {
+        shoppingCart.addItem(item);
+    }
