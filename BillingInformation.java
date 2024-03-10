@@ -28,4 +28,8 @@ public class BillingInformation {
         this.deliveryAddress = deliveryAddress;
     }
 
+    public CreditCardInformation getCreditCardInformation() {
+        return creditCardInformation;
+    }
+
     
