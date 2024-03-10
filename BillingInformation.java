@@ -20,4 +20,7 @@ public class BillingInformation {
         this.receiverName = receiverName;
     }
 
-   
+    public String getDeliveryAddress() {
+        return deliveryAddress;
+    }
+
