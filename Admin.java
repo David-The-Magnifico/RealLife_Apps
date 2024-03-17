@@ -10,4 +10,8 @@ public final class Admin extends User {
         super(id, name, age, emailAddress, homeAddress, password, phone);
     }
 
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
     
