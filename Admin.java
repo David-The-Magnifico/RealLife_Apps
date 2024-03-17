@@ -14,4 +14,8 @@ public final class Admin extends User {
         return customers;
     }
 
+    public void registerCustomer(Customer customer) {
+        customers.add(customer);
+    }
+
     
