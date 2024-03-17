@@ -25,4 +25,11 @@ public final class Admin extends User {
         return newCustomer;
     }
 
+    public void removeCustomerAccount(int customerId, String password) {
+        Customer customer = findCustomer(customerId);
+        validate(customer, password);
+
+        customers.remove(customer);
+    }
+
     
