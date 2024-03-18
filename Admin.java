@@ -1,4 +1,4 @@
-import oopEstore.exceptions.IncorrectPasswordException;
+import Estore.exceptions.IncorrectPasswordException;
 import java.util.ArrayList;
 import java.util.List;
 
